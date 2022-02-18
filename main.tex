@@ -4,9 +4,8 @@
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 
-\usepackage[fleqn]{amsmath}
+\usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{lipsum}
 
 \title{GPGN470A HW 3: Orbits, Distortion, Apertures}
 \author{Tyler Singleton}
@@ -14,22 +13,40 @@
 \begin{document}
 \maketitle
 
-\question
-\lipsum[2-4]
+% --- Question 1 --- %
+\textbf{Question 1:} \\
 
-\begin{sub-question}
-    \lipsum[2-4]
-\end{sub-question}
+Starting with our velocity equation (Rees 10.3.1) and defining an orbital period as the time it takes our satellite to travel the circumference of our orbit, we have the following two equations: 
+\begin{gather*}\label{eq:velocity}
+    v = \sqrt{\frac{GM}{r}} \text{ and } T = \frac{2\pi r}{v} \Rightarrow v = \frac{2\pi r}{T}
+\end{gather*}
 
-\question
-\lipsum[2-4]
+We can then derive the angular velocity and redefine the period in its terms as: 
+\begin{gather*}
+    \frac{2\pi r}{T} = \sqrt{\frac{GM}{r}} \Rightarrow
+    \frac{4\pi^2 r^2}{T^2} = \frac{GM}{r} \Rightarrow
+    \frac{4\pi^2}{T^2} = \frac{GM}{r^3} \\
+    \therefore \\
+    \omega^2 = \frac{GM}{r^3} \text{ and } T = \frac{2\pi}{\omega}
+\end{gather*}
 
-\begin{sub-question}
-    \lipsum[2-4]
-\end{sub-question}
+Starting with our orbital equation of angular velocity and the product of GM to be $3.986$ x $10^5$ (Rees 10.3.2), then we have an angular velocity of: 
 
-\begin{sub-question}
-    \lipsum[2-4]
-\end{sub-question}
+\begin{gather*}
+    \omega^2 
+        = \frac{GM}{r^3}
+        = \frac{3.986 \text{x} 10^{5}                             \text{km}^{3}\text{s}^{-2}}
+            {(6400 \text{km} + 700 \text{km})^3}
+        = 1.11 \text{x} 10^{-6} \text{rads}^2 \text{s}^{-2} 
+\end{gather*}
+
+and orbital period of:
+
+\begin{gather*}
+    T = \frac{2\pi}{\omega} = \frac{2\pi}{1.06x10^{-3} \text{rads s}^{-1}} = 5954\text{s}
+\end{gather*}
+
+% --- Question 2 --- %
+\textbf{Question 2}
 
 \end{document}
